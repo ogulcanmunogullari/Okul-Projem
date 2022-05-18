@@ -1,8 +1,9 @@
-
+:root{
+    background-color: #2e2c4a7a;
+}
 .container{
     width: 980px;
     margin: 0 auto;
-    background-color: red;
 }
 
 

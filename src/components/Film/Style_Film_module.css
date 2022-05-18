@@ -1,0 +1,50 @@
+.film_container{
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+}
+.film_title{
+    color: #2e2c4a;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.film_description{
+    color: rgba(255, 255, 255, 0.623);
+    font-size: 1.2em;
+}
+.film_description::first-letter{
+    margin-left: 20px;
+}
+.film_button{
+    padding: 10px 15px;
+    background-color: #2e2c4a;
+    color: white;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.film_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.film_release{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #e1474a;
+    display: inline-block;
+}
+.yas{
+   
+   font-size: 1em;
+}
+.film_oneriBox{
+    margin-top: 10px;
+    width: 80px;
+    height: 140px;
+    background-color: red;
+}
