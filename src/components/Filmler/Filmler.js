@@ -7,7 +7,7 @@ import Loading from "../Loading";
 const API_URL =
   "https://api.themoviedb.org/3/movie/popular?api_key=6e7754bb1e34fec78f9c366f07d50de6";
 
-export default function Main({ arsiv, filtre, setFiltre, setInputValue }) {
+export default function Main({ arsiv, filtre, setFiltre, setInputValue, rdb }) {
   const [loading, setLoading] = useState(true);
   const [filmler, setFilmler] = useState([]);
   const [baslik, setBaslik] = useState(true);
@@ -42,6 +42,7 @@ export default function Main({ arsiv, filtre, setFiltre, setInputValue }) {
         .finally(() => setTimeout(() => setLoading(false), 1000));
     }
   }, [filtre]);
+  useEffect(() => {}, [arsiv]);
   return (
     <div className="filmler_container">
       {baslik === true ? (
@@ -56,7 +57,7 @@ export default function Main({ arsiv, filtre, setFiltre, setInputValue }) {
           {filmler.map((film) =>
             arsiv.includes(film.id) ? null : (
               <li className="filmler_li" key={film.id}>
-                <FilmBox {...film} />
+                <FilmBox rdb={rdb} {...film} />
               </li>
             )
           )}

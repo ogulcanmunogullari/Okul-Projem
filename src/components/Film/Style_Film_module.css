@@ -1,10 +1,12 @@
 .film_container{
-    height: 450px;
     overflow: hidden;
     display: flex;
     gap: 20px;
     padding: 20px;
     position: relative;
+}
+.film_container img{
+    max-width: 350px;
 }
 .film_title{
     color: #2e2c4a;
@@ -17,6 +19,7 @@
 }
 .film_description::first-letter{
     margin-left: 20px;
+    
 }
 .film_button{
     padding: 10px 15px;
@@ -47,4 +50,32 @@
     width: 80px;
     height: 140px;
     background-color: red;
+}
+@media only screen and (max-width:800px) {
+    .film_container{
+        flex-direction: row;   
+        padding-bottom: 100px;
+    }
+    .film_container img{
+        max-height: 425px;
+        align-self: center;
+    }
+}
+@media only screen and (max-width:600px) {
+    .film_container{
+        min-width: 380px;
+        overflow: hidden;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        padding-bottom: 100px;
+        position: relative;
+        flex-direction: column;
+        
+    }
+    .film_container img{
+        max-width: 350px ;
+        align-self: center;
+
+    }
 }

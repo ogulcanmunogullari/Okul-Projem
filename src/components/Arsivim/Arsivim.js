@@ -11,6 +11,7 @@ export default function Arsivim({
   filtre,
   setFiltre,
   setInputValue,
+  rdb,
 }) {
   const [loading, setLoading] = useState(true);
   const [filmler, setFilmler] = useState([]);
@@ -48,6 +49,7 @@ export default function Arsivim({
   return (
     <div className="filmler_container">
       <h1 className="filmler_title">Arşivim</h1>
+
       {loading && <Loading />}
       {!loading ? (
         <ul className="filmler_ul">
@@ -60,6 +62,7 @@ export default function Arsivim({
                   cikarButton={cikarButton}
                   arsiv={arsiv}
                   setArsiv={setArsiv}
+                  rdb={rdb}
                 />
               </li>
             ))}

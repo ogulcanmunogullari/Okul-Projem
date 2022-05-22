@@ -14,7 +14,7 @@ function Oneri({ id, arsiv }) {
         setLoading(true);
         setTimeout(() => setLoading(false), 1000);
       });
-  }, [id]);
+  }, [API_URL, id]);
   return (
     <div className="oneri_container">
       {!loading ? (

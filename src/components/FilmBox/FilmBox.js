@@ -1,9 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Style_FilmBox_module.css";
+
 const API_IMG = "https://image.tmdb.org/t/p/w500";
 let array = [];
-function FilmBox({ title, poster_path, id, cikarButton, arsiv, setArsiv }) {
+function FilmBox({
+  title,
+  poster_path,
+  id,
+  cikarButton,
+  arsiv,
+  setArsiv,
+  rdb,
+}) {
   function remove(id) {
     array = arsiv;
     const index = arsiv.indexOf(id);
@@ -17,7 +26,13 @@ function FilmBox({ title, poster_path, id, cikarButton, arsiv, setArsiv }) {
         <h4 className="box_title">{title}</h4>
       </Link>
       {cikarButton && (
-        <button className="box_button" onClick={() => remove(id)}>
+        <button
+          className="box_button"
+          onClick={() => {
+            rdb(id);
+            remove(id);
+          }}
+        >
           Arşivden Kaldır
         </button>
       )}
