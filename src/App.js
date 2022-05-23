@@ -28,6 +28,7 @@ function App() {
           // setArsiv([]);
           const data = snapshot.val();
           if (data !== null) {
+            // eslint-disable-next-line array-callback-return
             Object.values(data).map((item) => {
               setArsiv((oldArray) => [...oldArray, Number(item.movies)]);
             });
@@ -42,6 +43,7 @@ function App() {
         setHeaderV(false);
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   //add
@@ -57,6 +59,7 @@ function App() {
       setArsiv([]);
       const data = snapshot.val();
       if (data !== null) {
+        // eslint-disable-next-line array-callback-return
         Object.values(data).map((item) => {
           setArsiv((oldArray) => [...oldArray, item.movies]);
         });
