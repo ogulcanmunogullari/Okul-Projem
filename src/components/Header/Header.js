@@ -39,14 +39,14 @@ export default function Header({
       </Link>
       <ul className="list">
         <Link className="list__li" to="/homepage">
-          Popüler Filmler
+          Popular Movies
         </Link>
 
         <Link className="list__li" to="/arsivim">
-          Arşivim
+          Archive
         </Link>
         <li className="list__li" onClick={handleSignOut}>
-          Çıkış
+          Log Out
         </li>
       </ul>
       <input
@@ -55,6 +55,7 @@ export default function Header({
         value={inputValue}
         onChange={search}
         onClick={sifirla}
+        placeholder="Search"
       />
     </div>
   );

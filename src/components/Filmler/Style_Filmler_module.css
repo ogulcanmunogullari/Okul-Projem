@@ -17,7 +17,10 @@
     flex-wrap: wrap;
 }
 .filmler_title{
-    padding: 20px 0;
+    padding: 1em 0;
+    color: #e1474a;
+    text-align: center;
+    text-shadow: 2px 2px #2e2c4a;
 }
 
 @media only screen and (max-width:800px) {

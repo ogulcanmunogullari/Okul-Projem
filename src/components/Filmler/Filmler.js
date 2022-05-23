@@ -46,9 +46,9 @@ export default function Main({ arsiv, filtre, setFiltre, setInputValue, rdb }) {
   return (
     <div className="filmler_container">
       {baslik === true ? (
-        <h1 className="filmler_title">Popüler Filmler</h1>
+        <h1 className="filmler_title">Popular Movies</h1>
       ) : (
-        <h1 className="filmler_title">Aranan Filmler</h1>
+        <h1 className="filmler_title">Searched Movies</h1>
       )}
 
       {loading && <Loading />}

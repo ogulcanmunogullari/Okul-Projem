@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Style_Film_module.css";
 import axios from "axios";
@@ -67,7 +67,7 @@ function Film({ arsiv, setArsiv, rdb, wdb, readdb }) {
                   remove(film.id);
                 }}
               >
-                Arşivden Kaldır
+                Watched
               </button>
             ) : (
               <button
@@ -77,7 +77,7 @@ function Film({ arsiv, setArsiv, rdb, wdb, readdb }) {
                   setArsiv([...arsiv, film.id]);
                 }}
               >
-                Arşive Ekle
+                Add Archive
               </button>
             )}
           </div>

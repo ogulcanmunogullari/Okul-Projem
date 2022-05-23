@@ -53,70 +53,94 @@ function Welcome() {
   };
   return (
     <div className="welcome_container">
-      <h1>izledim.</h1>
+      <h1 className="welcome_h1 red">izledim.</h1>
       {isRegistering === true ? (
         <>
-          <input
-            type="email"
-            placeholder="Email"
-            value={registerInformation.email}
-            onChange={(e) =>
-              setRegisterInformation({
-                ...registerInformation,
-                email: e.target.value,
-              })
-            }
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={registerInformation.password}
-            onChange={(e) =>
-              setRegisterInformation({
-                ...registerInformation,
-                password: e.target.value,
-              })
-            }
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={registerInformation.confirmPassword}
-            onChange={(e) =>
-              setRegisterInformation({
-                ...registerInformation,
-                confirmPassword: e.target.value,
-              })
-            }
-          />
-          <button onClick={handleRegister}>Register</button>
-          <p className="welcome_link" onClick={() => setIsRegistering(false)}>
+          <div className="welcome_controller_div">
+            <h4 className="welcome_h1 white">Email</h4>
+            <input
+              type="email"
+              placeholder="Email"
+              value={registerInformation.email}
+              onChange={(e) =>
+                setRegisterInformation({
+                  ...registerInformation,
+                  email: e.target.value,
+                })
+              }
+            />
+          </div>
+
+          <div className="welcome_controller_div">
+            <h4 className="welcome_h1 white">Password</h4>
+            <input
+              type="password"
+              placeholder="Password"
+              value={registerInformation.password}
+              onChange={(e) =>
+                setRegisterInformation({
+                  ...registerInformation,
+                  password: e.target.value,
+                })
+              }
+            />
+          </div>
+
+          <div className="welcome_controller_div">
+            <h4 className="welcome_h1 white"> Confirm Password</h4>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={registerInformation.confirmPassword}
+              onChange={(e) =>
+                setRegisterInformation({
+                  ...registerInformation,
+                  confirmPassword: e.target.value,
+                })
+              }
+            />
+          </div>
+
+          <button className="welcome_button" onClick={handleRegister}>
+            Register
+          </button>
+          <p
+            className="welcome_link welcome_h1 white"
+            onClick={() => setIsRegistering(false)}
+          >
             Already have an account?
           </p>
         </>
       ) : (
         <>
-          <div>
-            <h4>Email</h4>
+          <div className="welcome_controller_div">
+            <h4 className="welcome_h1 white">Email</h4>
             <input
               type="email"
               required
               onChange={handleEmailChange}
               value={email}
+              placeholder="Email"
             />
           </div>
 
-          <div>
-            <h4>Password</h4>
+          <div className="welcome_controller_div">
+            <h4 className="welcome_h1 white">Password</h4>
             <input
               type="password"
               required
               onChange={handlePasswordChange}
               value={password}
+              placeholder="Password"
             />
           </div>
-          <button onClick={handleSignIn}>Sign In</button>
-          <p className="welcome_link" onClick={() => setIsRegistering(true)}>
+          <button className="welcome_button" onClick={handleSignIn}>
+            Sign In
+          </button>
+          <p
+            className="welcome_link welcome_h1 white"
+            onClick={() => setIsRegistering(true)}
+          >
             Create an account.
           </p>
         </>

@@ -14,22 +14,32 @@
     margin-bottom: 10px;
 }
 .film_description{
-    color: rgba(255, 255, 255, 0.623);
+    color: #2e2c4a;
     font-size: 1.2em;
+    font-weight: 500;
 }
 .film_description::first-letter{
     margin-left: 20px;
     
 }
 .film_button{
-    padding: 10px 15px;
-    background-color: #2e2c4a;
-    color: white;
+    padding: 0.5em 1em;
+
     font-size: 1.2em;
     position: absolute;
     bottom: 20px;
     right: 20px;
+    border-radius: 0.4em;
     cursor: pointer;
+    border: 2px solid #e1474a;
+    background-color: #2e2c4a;
+    color: whitesmoke;
+    
+}
+.film_button:hover{
+    background-color: #e1474a;
+    border: 2px solid whitesmoke;
+    color: #2e2c4a;
 }
 .film_flex{
     display: flex;
@@ -39,6 +49,7 @@
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #e1474a;
+    text-shadow: 1px 1px #2e2c4a;
     display: inline-block;
 }
 .yas{

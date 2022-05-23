@@ -48,7 +48,7 @@ export default function Arsivim({
 
   return (
     <div className="filmler_container">
-      <h1 className="filmler_title">Arşivim</h1>
+      <h1 className="filmler_title">My Archive</h1>
 
       {loading && <Loading />}
       {!loading ? (

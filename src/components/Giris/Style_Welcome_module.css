@@ -1,14 +1,69 @@
 .welcome_container{
     margin: 0 auto;
     display: flex;
-    background-color: red;
-    width: 400px;
+    
+    width: 30em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 40%;
+    border: 2px solid grey;
+    border-radius: 1em;
+    padding: 2em;
+    background-color: #2e2c4a;
 
 }
 .welcome_link{
     cursor: pointer;
+}
+.welcome_h1{
+    
+    text-align: left;
+    align-self: flex-start;
+}
+.welcome_controller_div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: whitesmoke;
+    margin-top: 0.5em;
+    
+}
+.welcome_controller_div input{
+border: 2px solid #e1474a;
+padding: 0.5em 1em;
+border-radius: 0.3em;
+}
+.welcome_controller_div input::placeholder{
+    color: #2e2c4a;
+    }
+.welcome_controller_div input:focus{
+        background-color: #e1474a;
+        color: whitesmoke;
+        border: 2px solid whitesmoke;
+        outline: none;
+    }
+
+.welcome_button{
+    padding: 0.5em 2em;
+    background-color: #e1474a;
+    color: #2e2c4a;
+    font-size: 1em;
+    font-weight: bold;
+    align-self: flex-end;
+    cursor: pointer;
+    border: 1px solid #2e2c4a;
+    margin-top: 0.5em;
+    border-radius: 0.4em;
+}
+.welcome_button:hover{
+    background-color: #2e2c4a;
+    color: #e1474a;
+    border: 1px solid whitesmoke;
+}
+.red{
+    color: #e1474a;
+}
+.white{
+    color: whitesmoke;
 }
