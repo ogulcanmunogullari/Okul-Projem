@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./app.css";
 //Sayfalar
 import Header from "./components/Header";
 import Filmler from "./components/Filmler";
