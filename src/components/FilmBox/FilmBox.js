@@ -33,7 +33,7 @@ function FilmBox({
             remove(id);
           }}
         >
-          Arşivden Kaldır
+          Click To Unwatch
         </button>
       )}
     </div>
